@@ -1,0 +1,106 @@
+body{
+    font-family: Century Gothic, Meiryo;
+}
+
+.float-left{
+    float: left;
+    margin-left: 50px;
+}
+
+.clear-float{
+    clear: both;
+}
+
+.btn-sized{
+    width: 85px;
+    padding: 2px;
+}
+
+.centered{
+    text-align: center;
+}
+
+.btn-menu{
+    text-align: left;
+    padding-left: 0px;
+}
+
+th{
+    padding: 5px;
+}
+
+.back-colored0{
+    background-color: khaki;
+
+}
+
+.back-colored1{
+    background-color: #31b0d5;
+}
+
+.back-colored2{
+    background-color: darkorange;
+}
+
+.back-colored3{
+    background-color: lightseagreen;
+}
+
+.back-colored4{
+    background-color: palevioletred;
+}
+
+.back-colored0, .back-colored1, .back-colored2, .back-colored3, .back-colored4{
+    padding: 2px 4px;
+    border-radius: 0.3em;
+    border-style:  solid;
+    border-width: 1px;
+}
+
+.left-layout{
+    float: left;
+    margin-right: 30px;
+}
+.right-layout{
+    float: left;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+fieldset{
+    margin-top: 20px;
+}
+
+legend{
+    margin-bottom: 10px;
+}
+
+.menu li{
+    list-style-type: none;
+    padding: 10px;
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+}
+.container{
+    width: 1200px;
+}
+
+form{
+    width: 1100px;
+    margin: 0px;
+}
+
+.full-width{
+    width:100%;
+}
+
+.left-margin-50{
+    margin-left: 50px;
+}
+
+.margin-bottom-50{
+     margin-bottom: 50px;
+}
