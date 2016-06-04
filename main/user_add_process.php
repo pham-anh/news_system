@@ -11,7 +11,7 @@ if (isset($_POST['add_user'])) {
     if (isset($_POST['password']) && strlen($_POST['password']) > 0) {
         if (isset($_POST['confirm_password']) && strlen($_POST['confirm_password']) > 0) {
             if ($_POST['password'] == $_POST['confirm_password']) {
-                $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                $password = md5($_POST['password']);
             } else {
                 $err['confirm_password'] = "<p class='text-danger'>Passwords not match.</p>";
             }

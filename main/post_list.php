@@ -9,6 +9,7 @@
         <div class='container center-block'>
             <?php
             if (isset($_SESSION['level'])) {
+                die('hello');
                 require_once '../includes/menu.php';
                 ?>
                 <?php
@@ -25,7 +26,7 @@
                 require_once 'db_connect_info.php';
                 $sql = "SELECT *, unix_timestamp(post.updated_at) as updated_timestamp FROM post ORDER BY updated_at DESC";
                 $posts = run_sql($sql);
-
+                var_dump($posts);
 
                 if ($posts->num_rows > 0) {
                     if (!isset($_GET['post_id'])) {

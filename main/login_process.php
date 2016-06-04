@@ -22,21 +22,21 @@ if (isset($_POST['login'])) {
         $query_exec = run_sql($login_info_query); //Hàm này sẽ xuất ra báo lỗi hoặc trả về resource / true (bool) tùy câu truy vấn
         //Nếu số dòng = 0 --> Báo lỗi đăng nhập
         if ($query_exec->num_rows === 0) {
-            $err['login'] = 'Username or password is not correct.';
+            $err['login'] = 'Username is not correct.';
         } else {
             //var_dump($_SESSION);
             $login_info = mysqli_fetch_assoc($query_exec);
             //Check if the password is correct
             //var_dump($login_info);
-            if (!password_verify($password, $login_info['password'])) {
-                $err['login'] = 'Username or password is not correct.';
+            if ($login_info['password'] !== md5($password)) {
+                $err['login'] = 'Password is not correct.';
             } else {
                 /* Ngược lại thì đăng nhập thành công --> Cấp phiên làm việc và chuyển đến trang kế */
-                //Cấp phiên làm việc 
+                //Cấp phiên làm việc
                 $_SESSION['user_id'] = $login_info['user_id'];
                 $_SESSION['username'] = $login_info['username'];
                 $_SESSION['level'] = $login_info['level'];
-                
+
                 //Chuyển trang
                 header('location: post_list.php');
                 exit;
