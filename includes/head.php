@@ -7,7 +7,7 @@ if (strpos($_SERVER['SERVER_PROTOCOL'], 'HTTPS') == FALSE) {
 } else {
     $protocol = 'https://';
 }
-$main_dir = $protocol . $_SERVER['SERVER_NAME'] . '/news_system/';
+$main_dir = $protocol . $_SERVER['SERVER_NAME'];
 ?>
 <title>News system</title>
 <meta charset="utf-8">
