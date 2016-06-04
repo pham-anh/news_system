@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php require_once '../includes/head.php'; ?>
+    <?php require_once 'includes/head.php'; ?>
 </head>
 <body>
-    <?php require_once '../includes/banner.php'; ?>
+    <?php require_once 'includes/banner.php'; ?>
     <div class='container'>
         <?php
 
 
 //Kiểm tra xem người dùng đăng nhập chưa?
 if (isset($_SESSION['level'])) {
-    require_once '../includes/menu.php';
+    require_once 'includes/menu.php';
     //Kiểm tra xem có phải admin không?
     if ($_SESSION['level'] == '2') {//Nếu đúng, xử lý xóa người dùng
         //Kiểm tra xem người dùng có nhấn nút xác nhận chưa
@@ -78,7 +78,7 @@ if (isset($_SESSION['level'])) {
 ?>
     </div>
         <?php
-require_once '../includes/footer.php';
+require_once 'includes/footer.php';
 ?>
     </body>
     </html>

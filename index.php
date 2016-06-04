@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php require_once '../includes/head.php'; ?>
+    <?php require_once 'includes/head.php'; ?>
 </head>
 <body>
-    <?php require_once '../includes/banner.php'; ?>
+    <?php require_once 'includes/banner.php'; ?>
     <div class='container'>
         <?php
 
@@ -48,7 +48,7 @@ session_start();
 
 if (isset($_SESSION['level'])) {
     echo "<h4 class='text-info'>Welcome home, " . $_SESSION['username'] . '!</h4>';
-    require_once '../includes/menu.php';
+    require_once 'includes/menu.php';
 //some contents
     echo 'hello';
     
@@ -57,13 +57,13 @@ if (isset($_SESSION['level'])) {
     
 } else {
     //if not logged in
-    require_once '../main/not_logged_in.php';
+    require_once 'not_logged_in.php';
 }
 
 ?>
 </div>
     <?php
-require_once '../includes/footer.php';
+require_once 'includes/footer.php';
 ?>
 </body>
 </html>

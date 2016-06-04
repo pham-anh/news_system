@@ -35,11 +35,11 @@ if (isset($_POST['post'])) {//validate:
 //            if ($file['size'] < 100000) {
 
                 //CONSIDER: move file after all others information PASSED
-                if (!move_uploaded_file($file['tmp_name'], '.././bootstrap/img/' . substr($file['name'], 0, (strrpos($file['name'], '.'))) .
+                if (!move_uploaded_file($file['tmp_name'], 'bootstrap/img/' . substr($file['name'], 0, (strrpos($file['name'], '.'))) .
                                 '_' . time() . substr($file['name'], strrpos($file['name'], '.')))) {
                     $err['file_upload'] = "<h5 class='text-danger'>Failed in uploading file.</h5>";
                 } else {
-                    $file_name = '.././bootstrap/img/' . substr($file['name'], 0, (strrpos($file['name'], '.'))) .
+                    $file_name = 'bootstrap/img/' . substr($file['name'], 0, (strrpos($file['name'], '.'))) .
                             '_' . time() . substr($file['name'], strrpos($file['name'], '.')); //Add into POST table
                 }
 //            } else {

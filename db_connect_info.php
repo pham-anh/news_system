@@ -1,5 +1,6 @@
 <?php
 
+//information to connect to heroku db server
 define('HOST', 'us-cdbr-iron-east-04.cleardb.net');
 define('U', 'b5ff4662599e63');
 define('P', 'b9806d06');

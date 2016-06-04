@@ -2,15 +2,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require_once '../includes/head.php'; ?>
+        <?php require_once 'includes/head.php'; ?>
     </head>
     <body>
-        <?php require_once '../includes/banner.php'; ?>
+        <?php require_once 'includes/banner.php'; ?>
         <div class='container center-block'>
             <?php
             if (isset($_SESSION['level'])) {
                 //die('hello');
-                require_once '../includes/menu.php';
+                require_once 'includes/menu.php';
                 ?>
                 <?php
                 if (isset($_SESSION['post_add_mess'])) {
@@ -101,7 +101,7 @@
         ?>
     </div>
     <?php
-    require_once '../includes/footer.php';
+    require_once 'includes/footer.php';
     ?>
 </body>
 </html>

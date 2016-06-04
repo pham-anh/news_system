@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php require_once '../includes/head.php'; ?>
+    <?php require_once 'includes/head.php'; ?>
 </head>
 <body>
-    <?php require_once '../includes/banner.php'; ?>
+    <?php require_once 'includes/banner.php'; ?>
     <?php require_once 'login_process.php'; ?> 
 
     <div class='container center-block'>
@@ -39,7 +39,7 @@
     </div>
 
     <?php
-    require_once '../includes/footer.php';
+    require_once 'includes/footer.php';
     ?>
 </body>
 </html>

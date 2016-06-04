@@ -2,16 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php require_once '../includes/head.php'; ?>
+    <?php require_once 'includes/head.php'; ?>
 </head>
 <body>    
-    <?php require_once '../includes/banner.php'; ?>
+    <?php require_once 'includes/banner.php'; ?>
     <div class='container'>
         <?php
 require_once 'common_function.php';
 
 if (isset($_SESSION['level'])) {// has logged in
-    require_once '../includes/menu.php';
+    require_once 'includes/menu.php';
     require_once 'post_add_process.php';
 
 //Display form
@@ -105,7 +105,7 @@ if (isset($_SESSION['level'])) {// has logged in
     </div>
 
 <?php
-require_once '../includes/footer.php';
+require_once 'includes/footer.php';
 ?>
   
 </body>

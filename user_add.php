@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php require_once '../includes/head.php'; ?>
+    <?php require_once 'includes/head.php'; ?>
 </head>
 <body>
-    <?php require_once '../includes/banner.php'; ?>
+    <?php require_once 'includes/banner.php'; ?>
         <?php
 
 session_start();
 //Nếu người dùng đã đăng nhập và là admin thì mới được vào
 if (isset($_SESSION['level'])) {
-    require_once '../includes/menu.php';
+    require_once 'includes/menu.php';
     //Kiểm tra người dùng có là admin không, nếu có thì cho add user
     if (($_SESSION['level']) === '2') {
         //Nếu người dùng nhấn nút Submit thì xử lý:
@@ -78,7 +78,7 @@ if (isset($_SESSION['level'])) {
 ?>
     </div>
         <?php
-require_once '../includes/footer.php';
+require_once 'includes/footer.php';
 ?>
 </body>
 </html>
