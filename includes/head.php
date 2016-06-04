@@ -2,7 +2,7 @@
 ini_set('display_errors','On'); 
 error_reporting(E_ALL);
 
-if (strpos($_SERVER['SERVER_PROTOCOL'], 'HTTPS') === FALSE) {
+if (strpos($_SERVER['SERVER_PROTOCOL'], 'HTTPS') == FALSE) {
     $protocol = 'http://';
 } else {
     $protocol = 'https://';
