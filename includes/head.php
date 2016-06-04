@@ -2,8 +2,6 @@
 ini_set('display_errors','On'); 
 error_reporting(E_ALL);
 
-var_dump($_SERVER);
-
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) AND $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
     $protocol = 'https://';
 } else if (strpos($_SERVER['SERVER_PROTOCOL'], 'HTTPS') === FALSE) {
