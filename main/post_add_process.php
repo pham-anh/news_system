@@ -69,11 +69,12 @@ if (isset($_POST['post'])) {//validate:
             $get_id_query = "select id from topic where name = '$new_topic';";
             $query_result = run_sql($get_id_query);
             if ($query_result->num_rows != 0) {
-                $topic_id = mysqli_fetch_assoc($query_result)['id'];
+                $added_topic = mysqli_fetch_assoc($query_result);
+                $topic_id = $added_topic['id'];
             }
             echo $topic_id;
         }
-//CONSIDER: TRANSACTION;            
+//CONSIDER: TRANSACTION;
         //die();
         //TODO: create id for new topic
         //TODO: check if new topic duplicates available topic
@@ -135,10 +136,10 @@ if (isset($_POST['post'])) {//validate:
             /*
              * If no transition or exit, the error below occurs:
              * Fatal error: Cannot redeclare run_sql() (previously declared in
-             * D:\APPLICATION\wamp\www\news_system\main\db_connect_info.php:9) 
+             * D:\APPLICATION\wamp\www\news_system\main\db_connect_info.php:9)
              * in D:\APPLICATION\wamp\www\news_system\main\db_connect_info.php on line 28
              */
         }
-    }   
-   
+    }
+
 }

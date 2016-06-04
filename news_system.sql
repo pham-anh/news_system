@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `post` (
   `topic` varchar(255) CHARACTER SET utf8 NOT NULL,
   `ref` varchar(255) CHARACTER SET utf8 NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `id` (`id`),
   KEY `author` (`author`),
@@ -137,28 +137,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `level`, `password`) VALUES
-(1, 'admin', '2', '$2y$10$XFIO8S/RL9LpmIWNcN521uxdZXh/qru6BqeDe/1m4si6MqNu9R3aC'),
-(2, 'user01', '1', '1234'),
-(24, 'Use02', '1', '02'),
-(25, 'User03', '1', 'User03'),
-(34, 'Chu Nhat', '1', '$2y$10$STGOM8j3sziN58jARJ0xLOJg6'),
-(35, 'Thu 2', '1', '$2y$10$strl3M5IjGBVmYqZUgPeWeUrV'),
-(36, 'thu 3', '1', '827ccb0eea8a706c4c34a16891f84e7b'),
-(37, 'Thu 5', '1', '46d01f7fe5b631c0993dc620094690e3'),
-(38, 'thu 6', '1', '827ccb0eea8a706c4c34a16891f84e7b'),
-(39, 'aaa', '1', '47bce5c74f589f4867dbd57e9ca9f808'),
-(40, 'bbb', '1', '$2y$10$0fPe0RNzzZDE528YPdINSOZE9'),
-(43, 'admin', '2', '$2y$10$sXi8HTNrRM4DmlPU436E0O1M5/IezPyml0yw31NGDlp/93cQDx.AG'),
-(44, 'phamanh', '1', '$2y$10$.4Cm066DDUxfXoa/mDbl3uw4s4Na1BpEfxyt1RA9Puz13PRw/WFTu'),
-(45, 'xtvn', '1', '$2y$10$JwhzNxk4SNQWtrO9/Q8mVO6CMgIR7Rmhr.XKbdeoevvtJSMbpwlaC'),
-(46, 'test', '1', '$2y$10$byqgrT5SxugYFil5coaUPOWTuGFrbvgMhVdSkJ7rXbQOlla.gPljm'),
-(47, 'testagain', '1', '$2y$10$oy4VZqo7ov0ULqG0eqGcnO9/nY970d8lvPHTTYZ1Perf1fjQ493eW'),
-(48, 'testagain', '1', '$2y$10$dCQwYoMdraPYssWTuSUxMOOm2CHlhMYd.eyXd6GEuzzDL2v.icpqO'),
-(49, 'testagain', '1', '$2y$10$2kha1tyq.wtSE/YXkkIH3u.ZXepvdPImMgblOFh2ibDQzlvoXUlja'),
-(50, 'member', '1', '$2y$10$QtFh6z0cXA3u4.GZGDQKLeGgdblKrnyGS0w754rzRVUaW8BqkQSgy'),
-(51, 'hello', '1', '$2y$10$y6qowZR.LCz9jKevWIpameU5mJxPb1cxZ2qswmTClh/eqJLd72hXC'),
-(52, 'test_new_add', '1', '$2y$10$8oBB4dCPXJQW1N9uMSLbQuBwXMHgrsiR4EtpB9NOuBfj/6oZRq8qm'),
-(53, 'test_new_add', '1', '$2y$10$l8f2rEgZtvzbYTodAGX3Xu3JTn1hLcWzy0q/OvpGUH9XwTDk.ir0S');
+(1, 'admin', '2', '21232f297a57a5a743894a0e4a801fc3');
 
 --
 -- Constraints for dumped tables

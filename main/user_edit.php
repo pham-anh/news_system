@@ -55,7 +55,7 @@ if (isset($_SESSION['level'])) {
                 if (isset($_POST['password']) && strlen($_POST['password']) > 0) {
                     if (isset($_POST['confirm_password']) && strlen($_POST['confirm_password']) > 0) {
                         if ($_POST['password'] === $_POST['confirm_password']) {
-                            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                            $password = md5($_POST['password']);
                             $user_edit_query = "update user set username = '".$username."', level = '".$level."', password = '".$password."' where user_id = '".$_POST['uid']."';";
                         } else {
                             $err['confirm_password'] = "<h4 class='text-danger'>Passwords not match.</h4>";
