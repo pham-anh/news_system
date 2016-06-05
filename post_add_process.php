@@ -116,8 +116,8 @@ if (isset($_POST['post'])) {//validate:
           ") values('$subj', '$categories', " . $_SESSION['user_id'] . ", '$content'" . isset($file_name) ? ", '$file_name'" : '' .
           isset($topics) ? ",'$topics'" : '' . isset($ref) ? ", '$ref'" : '' . ")";
           $query = "insert in to post(subject, category, author, content, img, topic, ref,updated_at) values ('$subj', '$categories', '" . $_SESSION['user_id'] . "', '$content'" . isset($file_name) ? ", '$file_name'" : '' . isset($topics) ? ", '$topics'" : '' . isset($ref) ? ", '$ref'" : '' . ")"; */
-        $updated_at = time();
-        $query = "insert into post(subject, category, author, short_content, content, img, topic, ref, updated_at) values ('$subj', '$categories', '" . $_SESSION['user_id'] . "', '$short_content', '$content', '$file_name', '$post_topics', '$ref', '$updated_at'" . ");";
+        
+        $query = "insert into post(subject, category, author, short_content, content, img, topic, ref, updated_at) values ('$subj', '$categories', '" . $_SESSION['user_id'] . "', '$short_content', '$content', '$file_name', '$post_topics', '$ref', null" . ");";
         /* if(isset($new_topic)){
           $query .= "insert into topic (name) values ('$new_topic');";
           }
